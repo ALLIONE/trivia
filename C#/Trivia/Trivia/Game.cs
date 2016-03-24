@@ -2,13 +2,13 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using Trivia;
 
 namespace UglyTrivia
 {
     public class Game
     {
-        List<string> players = new List<string>();
+        List<Joueur> players = new List<Joueur>();
 
         int[] places = new int[6];
         int[] purses = new int[6];
@@ -44,7 +44,7 @@ namespace UglyTrivia
             return (howManyPlayers() >= 2);
         }
 
-        public bool add(String playerName)
+        public bool add(Joueur playerName)
         {
             players.Add(playerName);
             places[howManyPlayers()] = 0;
@@ -200,7 +200,6 @@ namespace UglyTrivia
             if (currentPlayer == players.Count) currentPlayer = 0;
             return true;
         }
-
 
         private bool didPlayerWin()
         {
