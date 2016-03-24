@@ -15,18 +15,16 @@ namespace Trivia
         {
             for (int i = 0; i < 100; i++)
             {
-                
                 Game aGame = new Game();
 
                 aGame.add("Chet");
                 aGame.add("Pat");
                 aGame.add("Sue");
 
-                Random rand = new Random();
+                Random rand = new Random(i);
 
                 do
                 {
-
                     aGame.roll(rand.Next(5) + 1);
 
                     if (rand.Next(9) == 7)
